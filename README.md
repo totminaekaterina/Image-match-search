@@ -73,11 +73,13 @@ def extract_features(image_tensor):
     - Использует метод `kneighbors` для нахождения `k` ближайших соседей для признаков запроса.
     - Возвращает расстояния (`distances`) и индексы (`indices`) этих ближайших соседей.
 
-Также было решено использовать Accuracy, чтобы устаноовить правильно ли модель опрделяет класс базового изображения, с которым сравнивается тестовое, и которое наиболее близкое к нему. Далее метрика выводится для каждого тестового изображения и топ 5 самых близких к нему по косиносному растоянию базовых изображений. Примеры полученных результатов для класса "Kitchen" (Fig.2) и класса "Bathroom" (Fig.3)
+Также было решено использовать Accuracy, чтобы устаноовить правильно ли модель опрделяет класс базового изображения, с которым сравнивается тестовое, и которое наиболее близкое к нему. Далее метрика выводится для каждого тестового изображения и топ 5 самых близких к нему по косиносному растоянию базовых изображений. Примеры полученных результатов для класса "Kitchen" (Fig.2)
 
 ![kithen_example](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/kitchen_example.png)
 
 ![kithen_rank](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/kitchen_rank.png)
+
+и класса "Bathroom" (Fig.3)
 
 ![bathroom_example](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/bathroom_example.png)
 
@@ -95,11 +97,13 @@ def extract_features(image_tensor):
 2. Далее вычисляется точность соответствия изображений с другими классами. Для этого считается количество правильных совпадений изображений с классами, отличными от тестового класса, и делится на общее количество изображений, для которых выполняется сопоставление (параметр `k`). 
 3. Как результат, возвращается массив индексов изображений из базы данных с наибольшими сходствами и вычисленную точность соответствия, а также те самые наиболее близкие изображения.
 
-Ниже представлены результаты, полученные для тестового изображения из класса "Bedroom" (Fig.4) и "Wardrobe" (Fig.5). Тотальная точность алгоритма составляет 94%, что является довольно высоким результатом.
+Ниже представлены результаты, полученные для тестового изображения из класса "Bedroom" (Fig.4)
 
 ![bedroom_example](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/bedroom_example.png)
 
 ![bedroom_rank](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/bedroom_rank.png)
+
+и "Wardrobe" (Fig.5). Тотальная точность (Total Accuracy) алгоритма составляет 94%, что является довольно высоким результатом.
 
 ![wardrobe_example](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/wardrobe_example.png)
 
