@@ -77,7 +77,7 @@ def extract_features(image_tensor):
 
 ![kithen_example](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/kitchen_example.png)
 
-![kithen_rank](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/kitchen_example.png)
+![kithen_rank](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/kitchen_rank.png)
 
 ![bathroom_example](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/bathroom_example.png)
 
