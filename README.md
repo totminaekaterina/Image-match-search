@@ -76,7 +76,7 @@ Query attributes (`query_features`), database attributes (`database_features`), 
     - Creates the `Nearest Neighbors` object using the `cosine` metric (cosine similarity).
     - Trains the model based on database attributes using the `fit` method.
     - Uses the `kneighbors` method to find the `k` nearest neighbors for query features.
-    - Returns the distances (`distances') and indexes (`indices') of these nearest neighbors.
+    - Returns the distances (`distances`) and indexes (`indices`) of these nearest neighbors.
 
 The Accuracy metric was used to determine whether the model correctly classifies the base image with which the test image is compared. The metric is displayed for each test image and the top 5 base images closest to it. Examples of the results obtained for the "Kitchen" class (Fig.1)
 
