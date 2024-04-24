@@ -17,17 +17,17 @@ Two iterations are presented, which differ in the methods of solving the Nearest
 
 ### The stages of task completion
 
-1. Preprocessing of the provided data, which involves bringing them to a single format.
-2. Loading a pre-trained ResNet computer vision model with 50 layers.
-3. Removing the last classification layers in order to leave only the layers necessary for feature extraction.
-4. Converting images from the test and base sets into tensors by feeding them through the ResNet model and obtaining feature vectors. Two algorithms are employed to identify the most similar images from the base set:
+1. ** Preprocessing of the provided data** , which involves bringing them to a single format.
+2. ** Loading a pre-trained ResNet model**  with 50 layers.
+3. ** Removing the last classification layers**  in order to leave only the layers necessary for feature extraction.
+4. ** Converting images**  from the test and base sets ** into tensors**  by feeding them through the ResNet model and obtaining feature vectors. Two algorithms are employed to identify the most similar images from the base set:
     - Nearest Neighbours.
     - Correspondence to other classes.
-5. The results are returned in the form of the top five matches for each image.
+5. ** The results**  are returned in the form of the top five matches for each image.
 
 ### Stage 1. Preprocessing data from the base and test datasets
 
-The base dataset was created for the purposes of the study, comprising 225 images divided into 5 classes (subfolders in the main folder). These classes were defined as follows: "Kitchen", "Living room", "Bathroom", "Bedroom" and "Wardrobe". A similar structure was used to create the test dataset, containing a total of 25 images, with 5 images for each class.
+The base dataset was created for the purposes of the study, comprising 225 images divided into 5 classes (subfolders in the main folder). These classes were defined as follows: *"Kitchen"*, *"Living room"*, *"Bathroom"*, *"Bedroom"* and *"Wardrobe"*. A similar structure was used to create the test dataset, containing a total of 25 images, with 5 images for each class.
 
 Images from the test dataset were used for comparison with images from the base dataset.
 
@@ -35,9 +35,7 @@ At this stage, the necessary directories for image preprocessing are created, in
 
 ### Stage 2. Loading the pre-trained ResNet50 model
 
-ResNet-50 is a deep convolutional neural network pre-trained on a large image dataset. It has a proven ability to classify images with high accuracy.
-
-The ResNet-50 model was chosen because it has a deep architecture. This allows it to extract high-level features from images, making it good at capturing complex patterns and features.
+**ResNet-50** is a deep convolutional neural network pre-trained on a large image dataset. It has a proven ability to classify images with high accuracy. This model was chosen because it has a deep architecture. This allows it to extract high-level features from images, making it good at capturing complex patterns and features.
 
 ### Stage 3. Removing the last classification layers in the model
 
