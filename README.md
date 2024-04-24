@@ -17,13 +17,13 @@ Two iterations are presented, which differ in the methods of solving the Nearest
 
 ### The stages of task completion
 
-1. ** Preprocessing of the provided data** , which involves bringing them to a single format.
-2. ** Loading a pre-trained ResNet model**  with 50 layers.
-3. ** Removing the last classification layers**  in order to leave only the layers necessary for feature extraction.
-4. ** Converting images**  from the test and base sets ** into tensors**  by feeding them through the ResNet model and obtaining feature vectors. Two algorithms are employed to identify the most similar images from the base set:
+1. **Preprocessing of the provided data**, which involves bringing them to a single format.
+2. **Loading a pre-trained ResNet model** with 50 layers.
+3. **Removing the last classification layers** in order to leave only the layers necessary for feature extraction.
+4. **Converting images** from the test and base sets ** into tensors**  by feeding them through the ResNet model and obtaining feature vectors. Two algorithms are employed to identify the most similar images from the base set:
     - Nearest Neighbours.
     - Correspondence to other classes.
-5. ** The results**  are returned in the form of the top five matches for each image.
+5. **The results** are returned in the form of the top five matches for each image.
 
 ### Stage 1. Preprocessing data from the base and test datasets
 
