@@ -1,6 +1,6 @@
 # Image match search using K Nearest Neighbors and Correspondence to other classes
 
-## Постановка задачи
+## Problem statement
 
 The objective of this task is to develop an algorithm that enables the comparison of images using two methods: **Nearest Neighbours** and **Correspondence to other classes**. The algorithm should be capable of identifying the most similar images from the base dataset for a given test image.
 
