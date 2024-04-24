@@ -90,7 +90,7 @@ and for the "Bathroom" class (Fig.3)
 
 ![bathroom_rank](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/bathroom_rank.png)
 
-**As a resul** in the first approach, the proximity of the image to the images in the database of any class was evaluated. The accuracy of this comparison was then compared, so that the total accuracy indicator will always be 100%. The model correctly identified the top 5 most "close" images.
+**As a result** in the first approach, the proximity of the image to the images in the database of any class was evaluated. The accuracy of this comparison was then compared, so that the total accuracy indicator will always be 100%. The model correctly identified the top 5 most "close" images.
 
 #### Using Correspondence to other classes
 
@@ -112,7 +112,7 @@ and "Wardrobe" (Fig.5) achieved a 94% accuracy rate.
 
 ![wardrobe_rank](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/wardrobe_rank.png)
 
-**As a resul**, the second approach permits the assessment of the degree to which the image corresponds to any of the classes, as well as the measurement of the accuracy of this correspondence. It employs a matching method based on cosine similarity, in contrast to the previous approach, which utilised the nearest neighbour method with cosine distance.
+**As a result**, the second approach permits the assessment of the degree to which the image corresponds to any of the classes, as well as the measurement of the accuracy of this correspondence. It employs a matching method based on cosine similarity, in contrast to the previous approach, which utilised the nearest neighbour method with cosine distance.
 
 ## 2nd Iteration
 
