@@ -15,7 +15,7 @@ Two iterations are presented, which differ in the methods of solving the Nearest
 
 ## 1st Iteration
 
-## The stages of task completion
+### The stages of task completion
 
 1. Preprocessing of the provided data, which involves bringing them to a single format.
 2. Loading a pre-trained ResNet computer vision model with 50 layers.
