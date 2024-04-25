@@ -6,10 +6,13 @@ The objective of this task is to develop an algorithm that enables the compariso
 
 The input to the algorithm is an image, for which it is necessary to identify the images that are most similar in content within the database. The algorithm outputs the five most suitable images from the database, ordered by their degree of correspondence to the input image. This enables users to rapidly identify images with similar content for further research.
 
-Two iterations are presented, which differ in the methods of solving the Nearest Neighbors and Correspondence to other classes algorithms.
+Three iterations are presented, which differ in the methods of solving the Nearest Neighbors and Correspondence to other classes algorithms:
 
 1. In **the first iteration**, both the first and second algorithms, when analyzing the distance and proximity of two datasets, consider all classes in the base dataset, despite the class of the test image from the test class.
-2. In **the second iteration**, the approaches of the two algorithms diverge significantly.:
+2. In **the second iteration**, the approaches of the two algorithms diverge significantly:
+    - the *Nearest Neighbours* approach evaluates the proximity of the image to the images in the base dataset of the same class. This means that all other classes that do not match the class of the test image are not taken into account.
+    - In the *Correspondence to other classes* approach, we evaluate the similarity of the test image to images in a different class. We don't evaluate the same classes as the test image.
+3. In **the third iteration**, изменения затронулись именно подачи изображений:
     - the *Nearest Neighbours* approach evaluates the proximity of the image to the images in the base dataset of the same class. This means that all other classes that do not match the class of the test image are not taken into account.
     - In the *Correspondence to other classes* approach, we evaluate the similarity of the test image to images in a different class. We don't evaluate the same classes as the test image.
 
