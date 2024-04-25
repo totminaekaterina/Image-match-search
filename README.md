@@ -12,9 +12,9 @@ Three iterations are presented, which differ in the methods of solving the Neare
 2. In **the second iteration**, the approaches of the two algorithms diverge significantly:
     - the *Nearest Neighbours* approach evaluates the proximity of the image to the images in the base dataset of the same class. This means that all other classes that do not match the class of the test image are not taken into account.
     - In the *Correspondence to other classes* approach, we evaluate the similarity of the test image to images in a different class. We don't evaluate the same classes as the test image.
-3. In **the third iteration**, изменения затронулись именно подачи изображений:
-    - the *Nearest Neighbours* approach evaluates the proximity of the image to the images in the base dataset of the same class. This means that all other classes that do not match the class of the test image are not taken into account.
-    - In the *Correspondence to other classes* approach, we evaluate the similarity of the test image to images in a different class. We don't evaluate the same classes as the test image.
+3. In **the third iteration**, the following changes have been implemented::
+    - **New images of the test dataset** have been incorporated. In the third iteration, the images of the rooms are designed to differ as much as possible from one another. Some images are ambiguous. For example, there is a photograph in the dataset that shows only a ceiling and a lamp. This is done to observe the behaviour of the algorithms and to determine whether they will identify similar signs on completely unfamiliar and dissimilar images from the base dataset.
+    - **An interactive component has also been added**, allowing users to upload their own image and apply each of the methods, with the option of viewing the top five closest images from the base dataset.
 
 ## 1st Iteration
 
@@ -144,6 +144,58 @@ We use this method to find images that don't match the test image. This helps us
 ![bathroom_2_rank](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/bathroom_2_rank.png)
 
 **P.S.**: From the presented example, it can be observed that all the images, despite their initial lack of visual resemblance, share a common feature: the presence of flat surfaces, such as tables, cabinets, kitchen cabinets, and washing machines. This indicates that the algorithm is functioning as intended, identifying similar features across the images.
+
+
+
+## 3rd Iteration
+
+In the 3rd iteration, we removed the test and base datasets preprocessing stage. Data processing occurs at the stage of writing the algorithm and selecting feature vectors (3rd stage in the 3rd iteration code).
+
+The base data set has been augmented to include **252 images**, without the necessity to categorise them according to distinct room classes. **New images of the test dataset** have been incorporated and designed to differ as much as possible from one another (Fig 10).
+
+![test_examples](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/test_examples.png)
+
+
+#### Using the Nearest Neighbor Algorithm
+
+Let's investigate the results obtained using this method on new test images (Fig. 11-12) is now required.
+
+![3rs_it_nn_ex](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/nn_rank.png)
+
+![3rs_it_nn_rank](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/nn_example.png)
+
+**P.S.**: It is noteworthy that in the presented example, the algorithm selected only those images in which the table is depicted (with the exception of the final image, that can be explained to an insufficiently large dataset). This indicates that the feature vector correctly determined that the objects on the test and base datasets are a table.
+
+#### Rank User Given Image Using Nearest Neighbors
+
+In this stage **an interactive component has also been added**, allowing users to upload their own image and apply each of the methods, with the option of viewing the top five closest images from the base dataset (Fig. 13-14).
+
+![3rs_it_nn_user_ex](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/nn_user_rank.png)
+
+![3rs_it_nn_user_rank](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/nn_user_example.png)
+
+**P.S.**: Similarly, it can be observed that the kitchen set is consistently present in all the images, which serves to unite them visually.
+
+#### Using Correspondence to other classes
+
+Let's explore the result obtained using Correspondence to other classes method on new test images (Fig. 15-16).
+
+![3rs_it_cor_ex](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/cor_rank.png)
+
+![3rs_it_cor_rank](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/cor_example.png)
+
+**P.S.**: Similarly, it can be observed that the refrigerator is a constant presence in all the images, uniting them visually.
+
+#### Rank User Given Image Using Correspondence to other classes
+
+The results of the experiment conducted with the user-provided image (Fig. 17-18) are presented below.
+
+![3rs_it_cor_user_ex](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/cor_user_rank.png)
+
+![3rs_it_cor_user_rank](https://github.com/totminaekaterina/Image-match-search/blob/main/imgs/cor_user_example.png)
+
+**P.S.**: This is an intriguing example of how the model identified the feature vector and how the bed transformed into a sofa. However, this can be attributed to the fact that the bed depicted in the test image has a shape comparable to the dvians from the base dataset.
+
 
 # Conclusion
 
